@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AF076A6B-5266-413F-9F83-D15CC8F35864}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>newTest</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);D:\vtk_install\include\vtk-7.1</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);D:\vtk_build\lib\Debug</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);D:\vtk_install\include\vtk-7.1</IncludePath>
+    <LibraryPath>$(VCInstallDir)lib\amd64;$(VCInstallDir)atlmfc\lib\amd64;$(WindowsSDK_LibraryPath_x64);D:\vtk_build\lib\debug</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);D:\vtk_install\include\vtk-7.1</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);D:\vtk_build\lib\Release</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;QVTKWidgetPlugind.lib;vtkalglib-7.1d.lib;vtkChartsCore-7.1d.lib;vtkCommonColor-7.1d.lib;vtkCommonComputationalGeometry-7.1d.lib;vtkCommonCore-7.1d.lib;vtkCommonDataModel-7.1d.lib;vtkCommonExecutionModel-7.1d.lib;vtkCommonMath-7.1d.lib;vtkCommonMisc-7.1d.lib;vtkCommonSystem-7.1d.lib;vtkCommonTransforms-7.1d.lib;vtkDICOMParser-7.1d.lib;vtkDomainsChemistry-7.1d.lib;vtkexoIIc-7.1d.lib;vtkexpat-7.1d.lib;vtkFiltersAMR-7.1d.lib;vtkFiltersCore-7.1d.lib;vtkFiltersExtraction-7.1d.lib;vtkFiltersFlowPaths-7.1d.lib;vtkFiltersGeneral-7.1d.lib;vtkFiltersGeneric-7.1d.lib;vtkFiltersGeometry-7.1d.lib;vtkFiltersHybrid-7.1d.lib;vtkFiltersHyperTree-7.1d.lib;vtkFiltersImaging-7.1d.lib;vtkFiltersModeling-7.1d.lib;vtkFiltersParallel-7.1d.lib;vtkFiltersParallelImaging-7.1d.lib;vtkFiltersPoints-7.1d.lib;vtkFiltersProgrammable-7.1d.lib;vtkFiltersSelection-7.1d.lib;vtkFiltersSMP-7.1d.lib;vtkFiltersSources-7.1d.lib;vtkFiltersStatistics-7.1d.lib;vtkFiltersTexture-7.1d.lib;vtkFiltersVerdict-7.1d.lib;vtkfreetype-7.1d.lib;vtkGeovisCore-7.1d.lib;vtkgl2ps-7.1d.lib;vtkGUISupportQt-7.1d.lib;vtkGUISupportQtOpenGL-7.1d.lib;vtkGUISupportQtSQL-7.1d.lib;vtkhdf5-7.1d.lib;vtkhdf5_hl-7.1d.lib;vtkImagingColor-7.1d.lib;vtkImagingCore-7.1d.lib;vtkImagingFourier-7.1d.lib;vtkImagingGeneral-7.1d.lib;vtkImagingHybrid-7.1d.lib;vtkImagingMath-7.1d.lib;vtkImagingMorphological-7.1d.lib;vtkImagingSources-7.1d.lib;vtkImagingStatistics-7.1d.lib;vtkImagingStencil-7.1d.lib;vtkInfovisCore-7.1d.lib;vtkInfovisLayout-7.1d.lib;vtkInteractionImage-7.1d.lib;vtkInteractionStyle-7.1d.lib;vtkInteractionWidgets-7.1d.lib;vtkIOAMR-7.1d.lib;vtkIOCore-7.1d.lib;vtkIOEnSight-7.1d.lib;vtkIOExodus-7.1d.lib;vtkIOExport-7.1d.lib;vtkIOGeometry-7.1d.lib;vtkIOImage-7.1d.lib;vtkIOImport-7.1d.lib;vtkIOInfovis-7.1d.lib;vtkIOLegacy-7.1d.lib;vtkIOLSDyna-7.1d.lib;vtkIOMINC-7.1d.lib;vtkIOMovie-7.1d.lib;vtkIONetCDF-7.1d.lib;vtkIOParallel-7.1d.lib;vtkIOParallelXML-7.1d.lib;vtkIOPLY-7.1d.lib;vtkIOSQL-7.1d.lib;vtkIOTecplotTable-7.1d.lib;vtkIOVideo-7.1d.lib;vtkIOXML-7.1d.lib;vtkIOXMLParser-7.1d.lib;vtkjpeg-7.1d.lib;vtkjsoncpp-7.1d.lib;vtklibxml2-7.1d.lib;vtkmetaio-7.1d.lib;vtkNetCDF-7.1d.lib;vtkNetCDF_cxx-7.1d.lib;vtkoggtheora-7.1d.lib;vtkParallelCore-7.1d.lib;vtkpng-7.1d.lib;vtkproj4-7.1_d.lib;vtkRenderingAnnotation-7.1d.lib;vtkRenderingContext2D-7.1d.lib;vtkRenderingContextOpenGL-7.1d.lib;vtkRenderingCore-7.1d.lib;vtkRenderingFreeType-7.1d.lib;vtkRenderingGL2PS-7.1d.lib;vtkRenderingImage-7.1d.lib;vtkRenderingLabel-7.1d.lib;vtkRenderingLIC-7.1d.lib;vtkRenderingLOD-7.1d.lib;vtkRenderingOpenGL-7.1d.lib;vtkRenderingQt-7.1d.lib;vtkRenderingVolume-7.1d.lib;vtkRenderingVolumeOpenGL-7.1d.lib;vtksqlite-7.1d.lib;vtksys-7.1d.lib;vtktiff-7.1d.lib;vtkverdict-7.1d.lib;vtkViewsContext2D-7.1d.lib;vtkViewsCore-7.1d.lib;vtkViewsInfovis-7.1d.lib;vtkViewsQt-7.1d.lib;vtkzlib-7.1d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <UndefinePreprocessorDefinitions>是</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>vtkalglib-7.1d.lib;vtkChartsCore-7.1d.lib;vtkCommonColor-7.1d.lib;vtkCommonComputationalGeometry-7.1d.lib;vtkCommonCore-7.1d.lib;vtkCommonDataModel-7.1d.lib;vtkCommonExecutionModel-7.1d.lib;vtkCommonMath-7.1d.lib;vtkCommonMisc-7.1d.lib;vtkCommonSystem-7.1d.lib;vtkCommonTransforms-7.1d.lib;vtkDICOMParser-7.1d.lib;vtkDomainsChemistry-7.1d.lib;vtkexoIIc-7.1d.lib;vtkexpat-7.1d.lib;vtkFiltersAMR-7.1d.lib;vtkFiltersCore-7.1d.lib;vtkFiltersExtraction-7.1d.lib;vtkFiltersFlowPaths-7.1d.lib;vtkFiltersGeneral-7.1d.lib;vtkFiltersGeneric-7.1d.lib;vtkFiltersGeometry-7.1d.lib;vtkFiltersHybrid-7.1d.lib;vtkFiltersHyperTree-7.1d.lib;vtkFiltersImaging-7.1d.lib;vtkFiltersModeling-7.1d.lib;vtkFiltersParallel-7.1d.lib;vtkFiltersParallelImaging-7.1d.lib;vtkFiltersPoints-7.1d.lib;vtkFiltersProgrammable-7.1d.lib;vtkFiltersSelection-7.1d.lib;vtkFiltersSMP-7.1d.lib;vtkFiltersSources-7.1d.lib;vtkFiltersStatistics-7.1d.lib;vtkFiltersTexture-7.1d.lib;vtkFiltersVerdict-7.1d.lib;vtkfreetype-7.1d.lib;vtkGeovisCore-7.1d.lib;vtkgl2ps-7.1d.lib;vtkGUISupportQt-7.1d.lib;vtkGUISupportQtOpenGL-7.1d.lib;vtkGUISupportQtSQL-7.1d.lib;vtkhdf5-7.1d.lib;vtkhdf5_hl-7.1d.lib;vtkImagingColor-7.1d.lib;vtkImagingCore-7.1d.lib;vtkImagingFourier-7.1d.lib;vtkImagingGeneral-7.1d.lib;vtkImagingHybrid-7.1d.lib;vtkImagingMath-7.1d.lib;vtkImagingMorphological-7.1d.lib;vtkImagingSources-7.1d.lib;vtkImagingStatistics-7.1d.lib;vtkImagingStencil-7.1d.lib;vtkInfovisCore-7.1d.lib;vtkInfovisLayout-7.1d.lib;vtkInteractionImage-7.1d.lib;vtkInteractionStyle-7.1d.lib;vtkInteractionWidgets-7.1d.lib;vtkIOAMR-7.1d.lib;vtkIOCore-7.1d.lib;vtkIOEnSight-7.1d.lib;vtkIOExodus-7.1d.lib;vtkIOExport-7.1d.lib;vtkIOGeometry-7.1d.lib;vtkIOImage-7.1d.lib;vtkIOImport-7.1d.lib;vtkIOInfovis-7.1d.lib;vtkIOLegacy-7.1d.lib;vtkIOLSDyna-7.1d.lib;vtkIOMINC-7.1d.lib;vtkIOMovie-7.1d.lib;vtkIONetCDF-7.1d.lib;vtkIOParallel-7.1d.lib;vtkIOParallelXML-7.1d.lib;vtkIOPLY-7.1d.lib;vtkIOSQL-7.1d.lib;vtkIOTecplotTable-7.1d.lib;vtkIOVideo-7.1d.lib;vtkIOXML-7.1d.lib;vtkIOXMLParser-7.1d.lib;vtkjpeg-7.1d.lib;vtkjsoncpp-7.1d.lib;vtklibxml2-7.1d.lib;vtkmetaio-7.1d.lib;vtkNetCDF-7.1d.lib;vtkNetCDF_cxx-7.1d.lib;vtkoggtheora-7.1d.lib;vtkParallelCore-7.1d.lib;vtkpng-7.1d.lib;vtkproj4-7.1_d.lib;vtkRenderingAnnotation-7.1d.lib;vtkRenderingContext2D-7.1d.lib;vtkRenderingContextOpenGL-7.1d.lib;vtkRenderingCore-7.1d.lib;vtkRenderingFreeType-7.1d.lib;vtkRenderingGL2PS-7.1d.lib;vtkRenderingImage-7.1d.lib;vtkRenderingLabel-7.1d.lib;vtkRenderingLIC-7.1d.lib;vtkRenderingLOD-7.1d.lib;vtkRenderingOpenGL-7.1d.lib;vtkRenderingQt-7.1d.lib;vtkRenderingVolume-7.1d.lib;vtkRenderingVolumeOpenGL-7.1d.lib;vtksqlite-7.1d.lib;vtksys-7.1d.lib;vtktiff-7.1d.lib;vtkverdict-7.1d.lib;vtkViewsContext2D-7.1d.lib;vtkViewsCore-7.1d.lib;vtkViewsInfovis-7.1d.lib;vtkViewsQt-7.1d.lib;vtkzlib-7.1d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>QVTKWidgetPlugin.lib;vtkalglib-7.1.lib;vtkChartsCore-7.1.lib;vtkCommonColor-7.1.lib;vtkCommonComputationalGeometry-7.1.lib;vtkCommonCore-7.1.lib;vtkCommonDataModel-7.1.lib;vtkCommonExecutionModel-7.1.lib;vtkCommonMath-7.1.lib;vtkCommonMisc-7.1.lib;vtkCommonSystem-7.1.lib;vtkCommonTransforms-7.1.lib;vtkDICOMParser-7.1.lib;vtkDomainsChemistry-7.1.lib;vtkexoIIc-7.1.lib;vtkexpat-7.1.lib;vtkFiltersAMR-7.1.lib;vtkFiltersCore-7.1.lib;vtkFiltersExtraction-7.1.lib;vtkFiltersFlowPaths-7.1.lib;vtkFiltersGeneral-7.1.lib;vtkFiltersGeneric-7.1.lib;vtkFiltersGeometry-7.1.lib;vtkFiltersHybrid-7.1.lib;vtkFiltersHyperTree-7.1.lib;vtkFiltersImaging-7.1.lib;vtkFiltersModeling-7.1.lib;vtkFiltersParallel-7.1.lib;vtkFiltersParallelImaging-7.1.lib;vtkFiltersPoints-7.1.lib;vtkFiltersProgrammable-7.1.lib;vtkFiltersSelection-7.1.lib;vtkFiltersSMP-7.1.lib;vtkFiltersSources-7.1.lib;vtkFiltersStatistics-7.1.lib;vtkFiltersTexture-7.1.lib;vtkFiltersVerdict-7.1.lib;vtkfreetype-7.1.lib;vtkGeovisCore-7.1.lib;vtkgl2ps-7.1.lib;vtkGUISupportQt-7.1.lib;vtkGUISupportQtOpenGL-7.1.lib;vtkGUISupportQtSQL-7.1.lib;vtkhdf5-7.1.lib;vtkhdf5_hl-7.1.lib;vtkImagingColor-7.1.lib;vtkImagingCore-7.1.lib;vtkImagingFourier-7.1.lib;vtkImagingGeneral-7.1.lib;vtkImagingHybrid-7.1.lib;vtkImagingMath-7.1.lib;vtkImagingMorphological-7.1.lib;vtkImagingSources-7.1.lib;vtkImagingStatistics-7.1.lib;vtkImagingStencil-7.1.lib;vtkInfovisCore-7.1.lib;vtkInfovisLayout-7.1.lib;vtkInteractionImage-7.1.lib;vtkInteractionStyle-7.1.lib;vtkInteractionWidgets-7.1.lib;vtkIOAMR-7.1.lib;vtkIOCore-7.1.lib;vtkIOEnSight-7.1.lib;vtkIOExodus-7.1.lib;vtkIOExport-7.1.lib;vtkIOGeometry-7.1.lib;vtkIOImage-7.1.lib;vtkIOImport-7.1.lib;vtkIOInfovis-7.1.lib;vtkIOLegacy-7.1.lib;vtkIOLSDyna-7.1.lib;vtkIOMINC-7.1.lib;vtkIOMovie-7.1.lib;vtkIONetCDF-7.1.lib;vtkIOParallel-7.1.lib;vtkIOParallelXML-7.1.lib;vtkIOPLY-7.1.lib;vtkIOSQL-7.1.lib;vtkIOTecplotTable-7.1.lib;vtkIOVideo-7.1.lib;vtkIOXML-7.1.lib;vtkIOXMLParser-7.1.lib;vtkjpeg-7.1.lib;vtkjsoncpp-7.1.lib;vtklibxml2-7.1.lib;vtkmetaio-7.1.lib;vtkNetCDF-7.1.lib;vtkNetCDF_cxx-7.1.lib;vtkoggtheora-7.1.lib;vtkParallelCore-7.1.lib;vtkpng-7.1.lib;vtkproj4-7.1.lib;vtkRenderingAnnotation-7.1.lib;vtkRenderingContext2D-7.1.lib;vtkRenderingContextOpenGL-7.1.lib;vtkRenderingCore-7.1.lib;vtkRenderingFreeType-7.1.lib;vtkRenderingGL2PS-7.1.lib;vtkRenderingImage-7.1.lib;vtkRenderingLabel-7.1.lib;vtkRenderingLIC-7.1.lib;vtkRenderingLOD-7.1.lib;vtkRenderingOpenGL-7.1.lib;vtkRenderingQt-7.1.lib;vtkRenderingVolume-7.1.lib;vtkRenderingVolumeOpenGL-7.1.lib;vtksqlite-7.1.lib;vtksys-7.1.lib;vtktiff-7.1.lib;vtkverdict-7.1.lib;vtkViewsContext2D-7.1.lib;vtkViewsCore-7.1.lib;vtkViewsInfovis-7.1.lib;vtkViewsQt-7.1.lib;vtkzlib-7.1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Gpu.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="newTest.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
